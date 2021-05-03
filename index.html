@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>html css js jqury</title>
+</head>
+<body>
+    <div class = "main-activity">
+        <div class="display">
+            <header>List of Person</header>
+            <table class="content-table" id="contents-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Age</th>
+                        <th>City</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id = "entryData">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="container">
+            <header>Add / Update Person form</header>
+            <form action="" id="my-form" class="form">
+                <label for="inputName" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="inputName" required pattern="\s*?[a-zA-Z]{1,15}\s*?"><br>
+                
+                <label class="form-label">Gender:</label>
+                <input class="form-check-input" type="radio" name="gender" id="radio-male" value="male"  required>
+                <label class="form-check-label" for="radio-male">Male</label>
+
+                <input  class="form-check-input" type="radio" name="gender" id="radio-female" value="female">
+                <label class="form-check-label" for="radio-female">Female</label><br>
+
+                <label for="inputAge" class="form-label" style="padding-right: 15px;" >Age:</label>
+                <input type="number" class="form-control" id="inputAge" aria-describedby="ageHelp" style="width: 188px;" required min="1" max="120"><br>
+                <label for="inputCity" class="form-label" style="padding-right: 15px; ">City:</label>
+                <select class="form-select" id="inputCity" name="inputCity" style="width: 188px;" aria-label="Default select example" required>
+                    <option value="Lahore">Lahore</option>
+                    <option value="Islamabad">Islamabad</option>
+                    <option value="Karachi">Karachi</option>
+                    <option value="Peshawer">Peshawer</option>
+                </select><br>
+                <button onclick="resetForm()">reset</button>
+                <button id="addBtn" type="submit">add</button>
+                <button onclick="updateEntry()" id="updateBtn">update</button>
+            </form>
+        </div>
+    </div>
+    <script src="appp.js"></script>
+</body>
+</html>
